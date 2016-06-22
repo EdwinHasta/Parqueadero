@@ -30,7 +30,7 @@ public class MenuAcceso extends javax.swing.JDialog {
 
         jlLogo = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jbRegistrarVehiculo = new javax.swing.JButton();
+        jbRegistrarSolicitud = new javax.swing.JButton();
         jbGenerarReporte = new javax.swing.JButton();
         jbCerrarSesion = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
@@ -39,7 +39,12 @@ public class MenuAcceso extends javax.swing.JDialog {
 
         jlLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/imgInicio.jpg"))); // NOI18N
 
-        jbRegistrarVehiculo.setText("Registrar vehículo");
+        jbRegistrarSolicitud.setText("Registrar solicitud");
+        jbRegistrarSolicitud.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrarSolicitudActionPerformed(evt);
+            }
+        });
 
         jbGenerarReporte.setText("Generar reporte");
         jbGenerarReporte.addActionListener(new java.awt.event.ActionListener() {
@@ -56,6 +61,11 @@ public class MenuAcceso extends javax.swing.JDialog {
         });
 
         jButton1.setText("Configurar sistema");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -64,17 +74,17 @@ public class MenuAcceso extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(64, 64, 64)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jbRegistrarVehiculo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jbRegistrarSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbGenerarReporte, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jbCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jbRegistrarVehiculo)
+                .addComponent(jbRegistrarSolicitud)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jbGenerarReporte)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -90,10 +100,12 @@ public class MenuAcceso extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jlLogo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlLogo)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,13 +129,23 @@ public class MenuAcceso extends javax.swing.JDialog {
         menu2.setVisible(true);
     }//GEN-LAST:event_jbGenerarReporteActionPerformed
 
+    private void jbRegistrarSolicitudActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarSolicitudActionPerformed
+        RegistrarSolicitud rd = new RegistrarSolicitud(null, true);
+        rd.setVisible(true);
+    }//GEN-LAST:event_jbRegistrarSolicitudActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ConfigurarSistema cs = new ConfigurarSistema(null, true);
+        cs.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbCerrarSesion;
     private javax.swing.JButton jbGenerarReporte;
-    private javax.swing.JButton jbRegistrarVehiculo;
+    private javax.swing.JButton jbRegistrarSolicitud;
     private javax.swing.JLabel jlLogo;
     // End of variables declaration//GEN-END:variables
 }

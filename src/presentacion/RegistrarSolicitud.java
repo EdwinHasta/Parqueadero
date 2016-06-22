@@ -28,11 +28,258 @@ public class RegistrarSolicitud extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jlLogo2 = new javax.swing.JLabel();
+        jpInfoCliente = new javax.swing.JPanel();
+        jbRegistrarCliente = new javax.swing.JButton();
+        jbSeleccionarCliente = new javax.swing.JButton();
+        jlIdCliente = new javax.swing.JLabel();
+        jtfIdCliente = new javax.swing.JTextField();
+        jtfNombreCliente = new javax.swing.JTextField();
+        jlInfoCliente = new javax.swing.JLabel();
+        jlNombreCliente = new javax.swing.JLabel();
+        jpInfoVehiculo = new javax.swing.JPanel();
+        jlInfoVehiculo = new javax.swing.JLabel();
+        jtfPlaca = new javax.swing.JTextField();
+        jlPlaca = new javax.swing.JLabel();
+        jlTipoVehiculo = new javax.swing.JLabel();
+        jtfTipoVehiculo = new javax.swing.JTextField();
+        jbRegistrarVehiculo = new javax.swing.JButton();
+        jbSeleccionarVehiculo = new javax.swing.JButton();
+        jpInfoSolicitud = new javax.swing.JPanel();
+        jlInfoSolicitud = new javax.swing.JLabel();
+        jlFechaIngreso = new javax.swing.JLabel();
+        jlFechaSalida = new javax.swing.JLabel();
+        jlTiempoTotal = new javax.swing.JLabel();
+        jlValorPagar = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jpRegistrarSolicitud = new javax.swing.JPanel();
+        jbRegistrarSolicitud = new javax.swing.JButton();
+        jbCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/p.jpg"))); // NOI18N
+        jlLogo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/presentacion/p.jpg"))); // NOI18N
+
+        jpInfoCliente.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jbRegistrarCliente.setText("Registrar");
+        jbRegistrarCliente.setActionCommand("");
+        jbRegistrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrarClienteActionPerformed(evt);
+            }
+        });
+
+        jbSeleccionarCliente.setText("Seleccionar");
+        jbSeleccionarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSeleccionarClienteActionPerformed(evt);
+            }
+        });
+
+        jlIdCliente.setText("I.D.");
+
+        jtfIdCliente.setEditable(false);
+
+        jtfNombreCliente.setEditable(false);
+
+        jlInfoCliente.setText("Información del cliente");
+
+        jlNombreCliente.setText("Nombre");
+
+        javax.swing.GroupLayout jpInfoClienteLayout = new javax.swing.GroupLayout(jpInfoCliente);
+        jpInfoCliente.setLayout(jpInfoClienteLayout);
+        jpInfoClienteLayout.setHorizontalGroup(
+            jpInfoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInfoClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpInfoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlInfoCliente)
+                    .addGroup(jpInfoClienteLayout.createSequentialGroup()
+                        .addComponent(jbRegistrarCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbSeleccionarCliente)
+                        .addGap(18, 18, 18)
+                        .addComponent(jlIdCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jtfIdCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlNombreCliente)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jtfNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpInfoClienteLayout.setVerticalGroup(
+            jpInfoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpInfoClienteLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlInfoCliente)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addGroup(jpInfoClienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbRegistrarCliente)
+                    .addComponent(jbSeleccionarCliente)
+                    .addComponent(jlIdCliente)
+                    .addComponent(jtfIdCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtfNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlNombreCliente))
+                .addContainerGap())
+        );
+
+        jpInfoVehiculo.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jlInfoVehiculo.setText("Información del vehículo");
+
+        jtfPlaca.setEditable(false);
+
+        jlPlaca.setText("Placa");
+
+        jlTipoVehiculo.setText("Tipo de vehículo");
+
+        jtfTipoVehiculo.setEditable(false);
+
+        jbRegistrarVehiculo.setText("Registrar");
+        jbRegistrarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrarVehiculoActionPerformed(evt);
+            }
+        });
+
+        jbSeleccionarVehiculo.setText("Seleccionar");
+        jbSeleccionarVehiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSeleccionarVehiculoActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpInfoVehiculoLayout = new javax.swing.GroupLayout(jpInfoVehiculo);
+        jpInfoVehiculo.setLayout(jpInfoVehiculoLayout);
+        jpInfoVehiculoLayout.setHorizontalGroup(
+            jpInfoVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInfoVehiculoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpInfoVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlInfoVehiculo)
+                    .addGroup(jpInfoVehiculoLayout.createSequentialGroup()
+                        .addComponent(jbRegistrarVehiculo)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbSeleccionarVehiculo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlPlaca)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jtfPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jlTipoVehiculo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jtfTipoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpInfoVehiculoLayout.setVerticalGroup(
+            jpInfoVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInfoVehiculoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlInfoVehiculo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpInfoVehiculoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtfPlaca, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlPlaca)
+                    .addComponent(jlTipoVehiculo)
+                    .addComponent(jtfTipoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbRegistrarVehiculo)
+                    .addComponent(jbSeleccionarVehiculo))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jpInfoSolicitud.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jlInfoSolicitud.setText("Información de la solicitud");
+
+        jlFechaIngreso.setText("Fecha y hora de ingreso");
+
+        jlFechaSalida.setText("Fecha y hora de salida");
+
+        jlTiempoTotal.setText("Tiempo total (minutos)");
+
+        jlValorPagar.setText("Valor a pagar");
+
+        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM/yyyy hh:mm:ss"))));
+
+        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("d/MM/yyyy hh:mm:ss"))));
+
+        jTextField6.setEditable(false);
+
+        javax.swing.GroupLayout jpInfoSolicitudLayout = new javax.swing.GroupLayout(jpInfoSolicitud);
+        jpInfoSolicitud.setLayout(jpInfoSolicitudLayout);
+        jpInfoSolicitudLayout.setHorizontalGroup(
+            jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInfoSolicitudLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlInfoSolicitud)
+                    .addGroup(jpInfoSolicitudLayout.createSequentialGroup()
+                        .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlFechaSalida, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlFechaIngreso))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jFormattedTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)
+                            .addComponent(jFormattedTextField2))
+                        .addGap(36, 36, 36)
+                        .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlTiempoTotal)
+                            .addComponent(jlValorPagar))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jpInfoSolicitudLayout.setVerticalGroup(
+            jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInfoSolicitudLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlInfoSolicitud)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlFechaIngreso)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlTiempoTotal)
+                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpInfoSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlFechaSalida)
+                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlValorPagar)
+                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jbRegistrarSolicitud.setText("Registrar solicitud");
+
+        jbCancelar.setText("Cancelar");
+        jbCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCancelarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpRegistrarSolicitudLayout = new javax.swing.GroupLayout(jpRegistrarSolicitud);
+        jpRegistrarSolicitud.setLayout(jpRegistrarSolicitudLayout);
+        jpRegistrarSolicitudLayout.setHorizontalGroup(
+            jpRegistrarSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jbRegistrarSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jbCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jpRegistrarSolicitudLayout.setVerticalGroup(
+            jpRegistrarSolicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpRegistrarSolicitudLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbRegistrarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53)
+                .addComponent(jbCancelar))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -40,63 +287,92 @@ public class RegistrarSolicitud extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jlLogo2)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jpInfoSolicitud, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jpInfoCliente, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jpInfoVehiculo, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpRegistrarSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
-                .addContainerGap(289, Short.MAX_VALUE))
+                .addComponent(jlLogo2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jpInfoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpInfoVehiculo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jpInfoSolicitud, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jpRegistrarSolicitud, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistrarSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistrarSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistrarSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistrarSolicitud.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_jbCancelarActionPerformed
 
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                RegistrarSolicitud dialog = new RegistrarSolicitud(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
+    private void jbRegistrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarClienteActionPerformed
+        RegistrarCliente rc = new RegistrarCliente(null, true);
+        rc.setVisible(true);
+    }//GEN-LAST:event_jbRegistrarClienteActionPerformed
+
+    private void jbRegistrarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarVehiculoActionPerformed
+        RegistrarVehiculo rv = new RegistrarVehiculo(null, true);
+        rv.setVisible(true);
+    }//GEN-LAST:event_jbRegistrarVehiculoActionPerformed
+
+    private void jbSeleccionarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSeleccionarClienteActionPerformed
+        ListaClientes lc = new ListaClientes(null, true);
+        lc.setVisible(true);
+    }//GEN-LAST:event_jbSeleccionarClienteActionPerformed
+
+    private void jbSeleccionarVehiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSeleccionarVehiculoActionPerformed
+        ListaVehiculos lv = new ListaVehiculos(null, true);
+        lv.setVisible(true);
+    }//GEN-LAST:event_jbSeleccionarVehiculoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JFormattedTextField jFormattedTextField2;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JButton jbCancelar;
+    private javax.swing.JButton jbRegistrarCliente;
+    private javax.swing.JButton jbRegistrarSolicitud;
+    private javax.swing.JButton jbRegistrarVehiculo;
+    private javax.swing.JButton jbSeleccionarCliente;
+    private javax.swing.JButton jbSeleccionarVehiculo;
+    private javax.swing.JLabel jlFechaIngreso;
+    private javax.swing.JLabel jlFechaSalida;
+    private javax.swing.JLabel jlIdCliente;
+    private javax.swing.JLabel jlInfoCliente;
+    private javax.swing.JLabel jlInfoSolicitud;
+    private javax.swing.JLabel jlInfoVehiculo;
+    private javax.swing.JLabel jlLogo2;
+    private javax.swing.JLabel jlNombreCliente;
+    private javax.swing.JLabel jlPlaca;
+    private javax.swing.JLabel jlTiempoTotal;
+    private javax.swing.JLabel jlTipoVehiculo;
+    private javax.swing.JLabel jlValorPagar;
+    private javax.swing.JPanel jpInfoCliente;
+    private javax.swing.JPanel jpInfoSolicitud;
+    private javax.swing.JPanel jpInfoVehiculo;
+    private javax.swing.JPanel jpRegistrarSolicitud;
+    private javax.swing.JTextField jtfIdCliente;
+    private javax.swing.JTextField jtfNombreCliente;
+    private javax.swing.JTextField jtfPlaca;
+    private javax.swing.JTextField jtfTipoVehiculo;
     // End of variables declaration//GEN-END:variables
 }

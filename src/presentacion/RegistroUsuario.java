@@ -5,6 +5,14 @@
  */
 package presentacion;
 
+import accesosistema.componente.implementacion.Usuario;
+import accesosistema.decorador.implementacion.ParametrosConsulta;
+import capturadatos.EntradaDatos;
+import capturadatos.EntradaPantalla;
+import java.util.ArrayList;
+import persistencia.EntradaSalida;
+import persistencia.validaciones.ValidarDatos;
+
 /**
  *
  * @author Edwin
@@ -50,6 +58,11 @@ public class RegistroUsuario extends javax.swing.JDialog {
 
         jbRegistrar.setText("Registrar");
         jbRegistrar.setNextFocusableComponent(jbCancelar);
+        jbRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegistrarActionPerformed(evt);
+            }
+        });
 
         jbCancelar.setText("Cancelar");
         jbCancelar.setNextFocusableComponent(jtfNombre);
@@ -139,6 +152,23 @@ public class RegistroUsuario extends javax.swing.JDialog {
     private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
         this.dispose();
     }//GEN-LAST:event_jbCancelarActionPerformed
+
+    private void jbRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegistrarActionPerformed
+        Usuario usuario = new Usuario(jtfNombre.getText(), jtfRole.getText(), jpfPass.getSelectedText());
+        ParametrosConsulta parametro = new ParametrosConsulta(usuario);
+        EntradaSalida manejoArchivos = new EntradaSalida();
+        ArrayList<Object> datos = new ArrayList<>();
+        manejoArchivos.procesar("LEER", "ACCESOR", datos);
+        ValidarDatos validador = new ValidarDatos();
+        if (!validador.verificarExistenciaRegistro("ACCESOR", datos, parametro)) {
+            datos.add(parametro);
+        }else{
+            EntradaDatos ed = new EntradaPantalla();
+            ed.mostrar("El usuario ya fue ingresado.");
+        }
+        manejoArchivos.procesar("GUARDAR", "ACCESOR", datos);
+        this.dispose();
+    }//GEN-LAST:event_jbRegistrarActionPerformed
 
     /**
      * @param args the command line arguments

@@ -7,12 +7,13 @@ package accesosistema.componente.implementacion;
 
 import accesosistema.componente.interfaz.Accesor;
 import capturadatos.*;
+import java.io.Serializable;
 
 /**
  *
  * @author Edwin
  */
-public class Usuario implements Accesor{
+public class Usuario implements Accesor, Serializable{
     private String nombre;
     private String role;
     private String contrasenha;
@@ -39,5 +40,10 @@ public class Usuario implements Accesor{
     public void ingresar() {
         EntradaDatos ed = new EntradaConsola();
         ed.mostrar("El usuario "+nombre+" ha ingresado.");
+    }
+
+    @Override
+    public String getNombreUsuario() {
+        return this.nombre;
     }
 }

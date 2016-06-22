@@ -5,17 +5,17 @@
  */
 package sistemaparqueadero;
 
+import java.io.Serializable;
 import java.util.Calendar;
 
 /**
  *
  * @author Edwin
  */
-public class ServicioParqueadero {
+public class ServicioParqueadero implements Serializable{
     private String titulo;
     private String sector;
-    private Calendar inicioPerMensual;
-    private Calendar finPerMensual;
+    
     private static ServicioParqueadero instancia;
     
     private ServicioParqueadero() {
@@ -41,20 +41,4 @@ public class ServicioParqueadero {
         this.sector = sector;
     }
 
-    public Calendar getInicioPerMensual() {
-        return inicioPerMensual;
-    }
-
-    public void setInicioPerMensual(Calendar inicioPerMensual) {
-        this.inicioPerMensual = inicioPerMensual;
-    }
-
-    public Calendar getFinPerMensual() {
-        return finPerMensual;
-    }
-
-    public void setFinPerMensual(Calendar finPerMensual) {
-        this.finPerMensual = finPerMensual;
-    }
-    
 }

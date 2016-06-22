@@ -17,8 +17,9 @@ public class ClienteAcceso {
     public static void main(String[] args){
         Usuario usuario = new Usuario("Edwin", "Administrador","pwd");
         ParametrosConsulta pConsulta= new ParametrosConsulta(usuario);
-        Sesion sesion = new Sesion(pConsulta);
+        pConsulta.ingresar();
+        /*Sesion sesion = new Sesion(pConsulta);
         sesion.ingresar();
-        System.out.println();
+        System.out.println();*/
     }
 }

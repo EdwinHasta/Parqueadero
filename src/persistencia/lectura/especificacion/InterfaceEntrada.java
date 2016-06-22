@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package accesosistema.componente.interfaz;
+package persistencia.lectura.especificacion;
+
+import java.util.ArrayList;
 
 /**
  *
  * @author Edwin
  */
-public interface Accesor {
-    public void ingresar();
-    public String getNombreUsuario();
+public interface InterfaceEntrada {
+    public void entrada(String nombreArchivo, ArrayList<Object> datos);
 }

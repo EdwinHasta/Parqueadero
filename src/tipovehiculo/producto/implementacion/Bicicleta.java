@@ -5,13 +5,14 @@
  */
 package tipovehiculo.producto.implementacion;
 
+import java.io.Serializable;
 import tipovehiculo.producto.interfaz.TipoVehiculo;
 
 /**
  *
  * @author Edwin
  */
-public class Bicicleta implements TipoVehiculo{
+public class Bicicleta implements TipoVehiculo, Serializable{
 
     private String nombre;
     private double tarifa;

@@ -46,8 +46,14 @@ public class ParametrosConsulta extends Ingreso{
     public void ingresar() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");	
         getAccesor().ingresar();
-        EntradaDatos ed = new EntradaConsola();
+        //EntradaDatos ed = new EntradaConsola();
+        EntradaDatos ed = new EntradaPantalla();
         ed.mostrarLinea("con fecha desde: "+sdf.format(fechaDesde.getTime())+" y fecha hasta: "+sdf.format(fechaHasta.getTime()) +".");
+    }
+
+    @Override
+    public String getNombreUsuario() {
+        return getAccesor().getNombreUsuario();
     }
     
 }

@@ -33,7 +33,13 @@ public class Sesion extends Ingreso{
     @Override
     public void ingresar() {
         getAccesor().ingresar();
-        EntradaDatos ed = new EntradaConsola();
+        //EntradaDatos ed = new EntradaConsola();
+        EntradaDatos ed = new EntradaPantalla();
         ed.mostrarLinea(" Y con la sesion "+estado.toLowerCase());
+    }
+
+    @Override
+    public String getNombreUsuario() {
+        return getAccesor().getNombreUsuario();
     }
 }

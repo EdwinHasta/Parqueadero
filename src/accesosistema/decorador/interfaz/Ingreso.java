@@ -6,12 +6,13 @@
 package accesosistema.decorador.interfaz;
 
 import accesosistema.componente.interfaz.Accesor;
+import java.io.Serializable;
 
 /**
  *
  * @author Edwin
  */
-public abstract class Ingreso implements Accesor{
+public abstract class Ingreso implements Accesor, Serializable{
     private Accesor accesor;
 
     public Ingreso(Accesor accesor) {

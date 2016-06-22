@@ -5,6 +5,13 @@
  */
 package presentacion;
 
+import accesosistema.componente.implementacion.Usuario;
+import capturadatos.EntradaDatos;
+import capturadatos.EntradaPantalla;
+import java.util.ArrayList;
+import persistencia.EntradaSalida;
+import persistencia.validaciones.ValidarDatos;
+
 /**
  *
  * @author Edwin
@@ -32,10 +39,10 @@ public class Inicio extends javax.swing.JFrame {
         jlUsuario = new javax.swing.JLabel();
         jtfUsuario = new javax.swing.JTextField();
         jlpass = new javax.swing.JLabel();
-        jtfPass = new javax.swing.JTextField();
         jbIngresar = new javax.swing.JButton();
         jbRegistrar = new javax.swing.JButton();
         jbSalir = new javax.swing.JButton();
+        jtfPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Parqueadero");
@@ -147,8 +154,22 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jbSalirActionPerformed
 
     private void jbIngresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbIngresarActionPerformed
-        MenuAcceso menu1 = new MenuAcceso(this, true);
-        menu1.setVisible(true);
+        EntradaSalida manejoArchivos = new EntradaSalida();
+        ArrayList<Object> datos = new ArrayList<>();
+        Usuario usuario = new Usuario(jtfUsuario.getText(), null, jtfPass.getSelectedText());
+        manejoArchivos.procesar("LEER", "ACCESOR", datos);
+        ValidarDatos validador = new ValidarDatos();
+        if (validador.verificarExistenciaRegistro("ACCESOR", datos, usuario)) {
+            MenuAcceso menu1 = new MenuAcceso(this, true);
+            this.dispose();
+            menu1.setVisible(true);
+            jtfUsuario.setText("");
+            jtfPass.setText("");
+            this.setVisible(true);
+        }else{
+            EntradaDatos ed = new EntradaPantalla();
+            ed.mostrar("El usuario no esta registrado.");
+        }
     }//GEN-LAST:event_jbIngresarActionPerformed
 
     /**
@@ -194,7 +215,7 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jlUsuario;
     private javax.swing.JLabel jlpass;
     private javax.swing.JPanel jpIngreso;
-    private javax.swing.JTextField jtfPass;
+    private javax.swing.JPasswordField jtfPass;
     private javax.swing.JTextField jtfUsuario;
     // End of variables declaration//GEN-END:variables
 }

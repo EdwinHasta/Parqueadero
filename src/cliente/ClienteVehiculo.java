@@ -8,6 +8,7 @@ package cliente;
 import capturadatos.EntradaConsola;
 import capturadatos.EntradaDatos;
 import java.util.ArrayList;
+import persistencia.EntradaSalida;
 import tipovehiculo.fabrica.implementacion.FabricaBicicleta;
 import tipovehiculo.fabrica.implementacion.FabricaCarro;
 import tipovehiculo.fabrica.implementacion.FabricaMoto;
@@ -21,7 +22,7 @@ import tipovehiculo.fabrica.interfaz.FabricaTipoVehiculo;
 public class ClienteVehiculo {
 
     private static FabricaTipoVehiculo fabVehi;
-    private static ArrayList<TipoVehiculo> tiposVehiculos;
+    private static ArrayList<Object> tiposVehiculos;
 
     public static TipoVehiculo crearCarro() {
         fabVehi = new FabricaCarro();
@@ -49,10 +50,14 @@ public class ClienteVehiculo {
         EntradaDatos ed = new EntradaConsola();
         crearTiposVehiculos();
         ed.mostrar("Vehiculos creados");
-        for (TipoVehiculo v : tiposVehiculos) {
+        for (Object w : tiposVehiculos) {
+            TipoVehiculo v = (TipoVehiculo) w;
             ed.mostrarLinea(v.getNombre()+" ");
             ed.mostrarLinea("$ "+String.valueOf(v.getTarifa()));
             ed.mostrar("");
         }
+        EntradaSalida manejoArchivos = new EntradaSalida();
+        ArrayList<Object> datos = new ArrayList<>();
+        manejoArchivos.procesar("GUARDAR", "TIPOVEHICULO", tiposVehiculos);
     }
 }
